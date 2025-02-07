@@ -3,6 +3,9 @@
 
 <head>
     <title>Translate Widget</title>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,38 +16,354 @@
 
         <div class="translation-area">
             <div class="column">
-                <select id="source-language">
+                <select id="source-language" class="language-select">
                     <option value="" disabled selected>Select Language</option>
-                    <option value="en">English</option>
-                    <option value="es">Spanish</option>
-                    <option value="fr">French</option>
-                    <option value="de">German</option>
-                    <option value="it">Italian</option>
-                    <option value="pt">Portuguese</option>
-                    <option value="ru">Russian</option>
-                    <option value="zh">Chinese</option>
-                    <option value="ja">Japanese</option>
+                    <option value="af-ZA">Afrikaans</option>
+                    <option value="sq-AL">Albanian</option>
+                    <option value="am-ET">Amharic</option>
+                    <option value="ar-SA">Arabic</option>
+                    <option value="hy-AM">Armenian</option>
+                    <option value="az-AZ">Azerbaijani</option>
+                    <option value="bjs-BB">Bajan</option>
+                    <option value="rm-RO">Balkan Gipsy</option>
+                    <option value="eu-ES">Basque</option>
+                    <option value="bem-ZM">Bemba</option>
+                    <option value="bn-IN">Bengali</option>
+                    <option value="be-BY">Bielarus</option>
+                    <option value="bi-VU">Bislama</option>
+                    <option value="bs-BA">Bosnian</option>
+                    <option value="br-FR">Breton</option>
+                    <option value="bg-BG">Bulgarian</option>
+                    <option value="my-MM">Burmese</option>
+                    <option value="ca-ES">Catalan</option>
+                    <option value="ceb-PH">Cebuano</option>
+                    <option value="ch-GU">Chamorro</option>
+                    <option value="zh-CN">Chinese (Simplified)</option>
+                    <option value="zh-TW">Chinese Traditional</option>
+                    <option value="zdj-KM">Comorian (Ngazidja)</option>
+                    <option value="cop-EG">Coptic</option>
+                    <option value="aig-AG">Creole English (Antigua and Barbuda)</option>
+                    <option value="bah-BS">Creole English (Bahamas)</option>
+                    <option value="gcl-GD">Creole English (Grenadian)</option>
+                    <option value="gyn-GY">Creole English (Guyanese)</option>
+                    <option value="jam-JM">Creole English (Jamaican)</option>
+                    <option value="svc-VC">Creole English (Vincentian)</option>
+                    <option value="vic-US">Creole English (Virgin Islands)</option>
+                    <option value="ht-HT">Creole French (Haitian)</option>
+                    <option value="acf-LC">Creole French (Saint Lucian)</option>
+                    <option value="crs-SC">Creole French (Seselwa)</option>
+                    <option value="pov-GW">Creole Portuguese (Upper Guinea)</option>
+                    <option value="hr-HR">Croatian</option>
+                    <option value="cs-CZ">Czech</option>
+                    <option value="da-DK">Danish</option>
+                    <option value="nl-NL">Dutch</option>
+                    <option value="dz-BT">Dzongkha</option>
+                    <option value="en-GB">English</option>
+                    <option value="eo-EU">Esperanto</option>
+                    <option value="et-EE">Estonian</option>
+                    <option value="fn-FNG">Fanagalo</option>
+                    <option value="fo-FO">Faroese</option>
+                    <option value="fi-FI">Finnish</option>
+                    <option value="fr-FR">French</option>
+                    <option value="gl-ES">Galician</option>
+                    <option value="ka-GE">Georgian</option>
+                    <option value="de-DE">German</option>
+                    <option value="el-GR">Greek</option>
+                    <option value="grc-GR">Greek (Classical)</option>
+                    <option value="gu-IN">Gujarati</option>
+                    <option value="ha-NE">Hausa</option>
+                    <option value="haw-US">Hawaiian</option>
+                    <option value="he-IL">Hebrew</option>
+                    <option value="hi-IN">Hindi</option>
+                    <option value="hu-HU">Hungarian</option>
+                    <option value="is-IS">Icelandic</option>
+                    <option value="id-ID">Indonesian</option>
+                    <option value="kl-GL">Inuktitut (Greenlandic)</option>
+                    <option value="ga-IE">Irish Gaelic</option>
+                    <option value="it-IT">Italian</option>
+                    <option value="ja-JP">Japanese</option>
+                    <option value="jv-ID">Javanese</option>
+                    <option value="kea-CV">Kabuverdianu</option>
+                    <option value="kab-DZ">Kabylian</option>
+                    <option value="kn-IN">Kannada</option>
+                    <option value="kk-KZ">Kazakh</option>
+                    <option value="km-KM">Khmer</option>
+                    <option value="rw-RW">Kinyarwanda</option>
+                    <option value="rn-BI">Kirundi</option>
+                    <option value="ko-KR">Korean</option>
+                    <option value="ku-TR">Kurdish</option>
+                    <option value="ckb-IQ">Kurdish Sorani</option>
+                    <option value="ky-KG">Kyrgyz</option>
+                    <option value="lo-LA">Lao</option>
+                    <option value="la-VA">Latin</option>
+                    <option value="lv-LV">Latvian</option>
+                    <option value="lt-LT">Lithuanian</option>
+                    <option value="lb-LU">Luxembourgish</option>
+                    <option value="mk-MK">Macedonian</option>
+                    <option value="mg-MG">Malagasy</option>
+                    <option value="ms-MY">Malay</option>
+                    <option value="dv-MV">Maldivian</option>
+                    <option value="mt-MT">Maltese</option>
+                    <option value="gv-IM">Manx Gaelic</option>
+                    <option value="mi-NZ">Maori</option>
+                    <option value="mh-MH">Marshallese</option>
+                    <option value="men-SL">Mende</option>
+                    <option value="mn-MN">Mongolian</option>
+                    <option value="mfe-MU">Morisyen</option>
+                    <option value="ne-NP">Nepali</option>
+                    <option value="niu-NU">Niuean</option>
+                    <option value="no-NO">Norwegian</option>
+                    <option value="ny-MW">Nyanja</option>
+                    <option value="ur-PK">Pakistani</option>
+                    <option value="pau-PW">Palauan</option>
+                    <option value="pa-IN">Panjabi</option>
+                    <option value="pap-CW">Papiamentu</option>
+                    <option value="ps-PK">Pashto</option>
+                    <option value="fa-IR">Persian</option>
+                    <option value="pis-SB">Pijin</option>
+                    <option value="pl-PL">Polish</option>
+                    <option value="pt-PT">Portuguese</option>
+                    <option value="pot-US">Potawatomi</option>
+                    <option value="qu-PE">Quechua</option>
+                    <option value="ro-RO">Romanian</option>
+                    <option value="ru-RU">Russian</option>
+                    <option value="sm-WS">Samoan</option>
+                    <option value="sg-CF">Sango</option>
+                    <option value="gd-GB">Scots Gaelic</option>
+                    <option value="sr-RS">Serbian</option>
+                    <option value="sn-ZW">Shona</option>
+                    <option value="si-LK">Sinhala</option>
+                    <option value="sk-SK">Slovak</option>
+                    <option value="sl-SI">Slovenian</option>
+                    <option value="so-SO">Somali</option>
+                    <option value="st-ST">Sotho, Southern</option>
+                    <option value="es-ES">Spanish</option>
+                    <option value="srn-SR">Sranan Tongo</option>
+                    <option value="sw-SZ">Swahili</option>
+                    <option value="sv-SE">Swedish</option>
+                    <option value="de-CH">Swiss German</option>
+                    <option value="syc-TR">Syriac (Aramaic)</option>
+                    <option value="tl-PH">Tagalog</option>
+                    <option value="tg-TJ">Tajik</option>
+                    <option value="tmh-DZ">Tamashek (Tuareg)</option>
+                    <option value="te-IN">Telugu</option>
+                    <option value="ta-LK">Tamil</option>
+                    <option value="tet-TL">Tetum</option>
+                    <option value="th-TH">Thai</option>
+                    <option value="bo-CN">Tibetan</option>
+                    <option value="ti-TI">Tigrinya</option>
+                    <option value="tpi-PG">Tok Pisin</option>
+                    <option value="tkl-TK">Tokelauan</option>
+                    <option value="to-TO">Tongan</option>
+                    <option value="tn-BW">Tswana</option>
+                    <option value="tr-TR">Turkish</option>
+                    <option value="tk-TM">Turkmen</option>
+                    <option value="tvl-TV">Tuvaluan</option>
+                    <option value="uk-UA">Ukrainian</option>
+                    <option value="ppk-ID">Uma</option>
+                    <option value="uz-UZ">Uzbek</option>
+                    <option value="vi-VN">Vietnamese</option>
+                    <option value="wls-WF">Wallisian</option>
+                    <option value="cy-GB">Welsh</option>
+                    <option value="wo-SN">Wolof</option>
+                    <option value="xh-ZA">Xhosa</option>
+                    <option value="yi-YD">Yiddish</option>
                 </select>
-                <textarea id="source-text" placeholder="Enter Text"></textarea>
+                <div class="textarea-container">
+                    <textarea id="source-text" placeholder="Enter Text" maxlength="500"></textarea>
+                    <div class="char-counter">0/500 characters</div>
+                </div>
+            </div>
+
+            <div class="swap-button">
+                <svg viewBox="0 0 15.3418 18.3301" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g transform="translate(0, 0)">
+                        <rect height="18.3301" opacity="0" width="15.3418" x="0" y="0"/>
+                        <path d="M14.7168 14.2383C15.0781 13.9062 15.0684 13.3887 14.7168 13.0566L10.7617 9.21875C10.6152 9.0625 10.3809 8.97461 10.1953 8.97461C9.72656 8.97461 9.41406 9.29688 9.41406 9.75586C9.41406 9.98047 9.49219 10.1465 9.62891 10.293L11.2012 11.7871L12.5879 12.9492L10.7812 12.8613L0.791016 12.8613C0.332031 12.8613 0 13.1934 0 13.6523C0 14.1113 0.332031 14.4434 0.791016 14.4434L10.7812 14.4434L12.5879 14.3555L11.2012 15.5078L9.62891 17.0117C9.49219 17.1582 9.41406 17.3242 9.41406 17.5488C9.41406 18.0078 9.72656 18.3301 10.1953 18.3301C10.3809 18.3301 10.6152 18.2324 10.7617 18.0859Z" fill="#ffffff" fill-opacity="0.85"/>
+                        <path d="M0.263672 4.10156C-0.0878906 4.43359-0.078125 4.95117 0.263672 5.27344L4.21875 9.12109C4.36523 9.26758 4.59961 9.36523 4.78516 9.36523C5.25391 9.36523 5.56641 9.04297 5.56641 8.58398C5.56641 8.35938 5.48828 8.19336 5.35156 8.04688L3.7793 6.54297L2.39258 5.39062L4.19922 5.47852L14.1895 5.47852C14.6484 5.47852 14.9805 5.14648 14.9805 4.6875C14.9805 4.22852 14.6484 3.89648 14.1895 3.89648L4.19922 3.89648L2.39258 3.98438L3.7793 2.83203L5.35156 1.32812C5.48828 1.18164 5.56641 1.01562 5.56641 0.791016C5.56641 0.332031 5.25391 0.00976562 4.78516 0.00976562C4.59961 0.00976562 4.36523 0.107422 4.21875 0.253906Z" fill="#ffffff" fill-opacity="0.85"/>
+                    </g>
+                </svg>
             </div>
 
             <div class="column">
-                <select id="target-language">
+                <select id="target-language" class="language-select">
                     <option value="" disabled selected>Select Language</option>
-                    <option value="en">English</option>
-                    <option value="es">Spanish</option>
-                    <option value="fr">French</option>
-                    <option value="de">German</option>
-                    <option value="it">Italian</option>
-                    <option value="pt">Portuguese</option>
-                    <option value="ru">Russian</option>
-                    <option value="zh">Chinese</option>
-                    <option value="ja">Japanese</option>
+                    <option value="af-ZA">Afrikaans</option>
+                    <option value="sq-AL">Albanian</option>
+                    <option value="am-ET">Amharic</option>
+                    <option value="ar-SA">Arabic</option>
+                    <option value="hy-AM">Armenian</option>
+                    <option value="az-AZ">Azerbaijani</option>
+                    <option value="bjs-BB">Bajan</option>
+                    <option value="rm-RO">Balkan Gipsy</option>
+                    <option value="eu-ES">Basque</option>
+                    <option value="bem-ZM">Bemba</option>
+                    <option value="bn-IN">Bengali</option>
+                    <option value="be-BY">Bielarus</option>
+                    <option value="bi-VU">Bislama</option>
+                    <option value="bs-BA">Bosnian</option>
+                    <option value="br-FR">Breton</option>
+                    <option value="bg-BG">Bulgarian</option>
+                    <option value="my-MM">Burmese</option>
+                    <option value="ca-ES">Catalan</option>
+                    <option value="ceb-PH">Cebuano</option>
+                    <option value="ch-GU">Chamorro</option>
+                    <option value="zh-CN">Chinese (Simplified)</option>
+                    <option value="zh-TW">Chinese Traditional</option>
+                    <option value="zdj-KM">Comorian (Ngazidja)</option>
+                    <option value="cop-EG">Coptic</option>
+                    <option value="aig-AG">Creole English (Antigua and Barbuda)</option>
+                    <option value="bah-BS">Creole English (Bahamas)</option>
+                    <option value="gcl-GD">Creole English (Grenadian)</option>
+                    <option value="gyn-GY">Creole English (Guyanese)</option>
+                    <option value="jam-JM">Creole English (Jamaican)</option>
+                    <option value="svc-VC">Creole English (Vincentian)</option>
+                    <option value="vic-US">Creole English (Virgin Islands)</option>
+                    <option value="ht-HT">Creole French (Haitian)</option>
+                    <option value="acf-LC">Creole French (Saint Lucian)</option>
+                    <option value="crs-SC">Creole French (Seselwa)</option>
+                    <option value="pov-GW">Creole Portuguese (Upper Guinea)</option>
+                    <option value="hr-HR">Croatian</option>
+                    <option value="cs-CZ">Czech</option>
+                    <option value="da-DK">Danish</option>
+                    <option value="nl-NL">Dutch</option>
+                    <option value="dz-BT">Dzongkha</option>
+                    <option value="en-GB">English</option>
+                    <option value="eo-EU">Esperanto</option>
+                    <option value="et-EE">Estonian</option>
+                    <option value="fn-FNG">Fanagalo</option>
+                    <option value="fo-FO">Faroese</option>
+                    <option value="fi-FI">Finnish</option>
+                    <option value="fr-FR">French</option>
+                    <option value="gl-ES">Galician</option>
+                    <option value="ka-GE">Georgian</option>
+                    <option value="de-DE">German</option>
+                    <option value="el-GR">Greek</option>
+                    <option value="grc-GR">Greek (Classical)</option>
+                    <option value="gu-IN">Gujarati</option>
+                    <option value="ha-NE">Hausa</option>
+                    <option value="haw-US">Hawaiian</option>
+                    <option value="he-IL">Hebrew</option>
+                    <option value="hi-IN">Hindi</option>
+                    <option value="hu-HU">Hungarian</option>
+                    <option value="is-IS">Icelandic</option>
+                    <option value="id-ID">Indonesian</option>
+                    <option value="kl-GL">Inuktitut (Greenlandic)</option>
+                    <option value="ga-IE">Irish Gaelic</option>
+                    <option value="it-IT">Italian</option>
+                    <option value="ja-JP">Japanese</option>
+                    <option value="jv-ID">Javanese</option>
+                    <option value="kea-CV">Kabuverdianu</option>
+                    <option value="kab-DZ">Kabylian</option>
+                    <option value="kn-IN">Kannada</option>
+                    <option value="kk-KZ">Kazakh</option>
+                    <option value="km-KM">Khmer</option>
+                    <option value="rw-RW">Kinyarwanda</option>
+                    <option value="rn-BI">Kirundi</option>
+                    <option value="ko-KR">Korean</option>
+                    <option value="ku-TR">Kurdish</option>
+                    <option value="ckb-IQ">Kurdish Sorani</option>
+                    <option value="ky-KG">Kyrgyz</option>
+                    <option value="lo-LA">Lao</option>
+                    <option value="la-VA">Latin</option>
+                    <option value="lv-LV">Latvian</option>
+                    <option value="lt-LT">Lithuanian</option>
+                    <option value="lb-LU">Luxembourgish</option>
+                    <option value="mk-MK">Macedonian</option>
+                    <option value="mg-MG">Malagasy</option>
+                    <option value="ms-MY">Malay</option>
+                    <option value="dv-MV">Maldivian</option>
+                    <option value="mt-MT">Maltese</option>
+                    <option value="gv-IM">Manx Gaelic</option>
+                    <option value="mi-NZ">Maori</option>
+                    <option value="mh-MH">Marshallese</option>
+                    <option value="men-SL">Mende</option>
+                    <option value="mn-MN">Mongolian</option>
+                    <option value="mfe-MU">Morisyen</option>
+                    <option value="ne-NP">Nepali</option>
+                    <option value="niu-NU">Niuean</option>
+                    <option value="no-NO">Norwegian</option>
+                    <option value="ny-MW">Nyanja</option>
+                    <option value="ur-PK">Pakistani</option>
+                    <option value="pau-PW">Palauan</option>
+                    <option value="pa-IN">Panjabi</option>
+                    <option value="pap-CW">Papiamentu</option>
+                    <option value="ps-PK">Pashto</option>
+                    <option value="fa-IR">Persian</option>
+                    <option value="pis-SB">Pijin</option>
+                    <option value="pl-PL">Polish</option>
+                    <option value="pt-PT">Portuguese</option>
+                    <option value="pot-US">Potawatomi</option>
+                    <option value="qu-PE">Quechua</option>
+                    <option value="ro-RO">Romanian</option>
+                    <option value="ru-RU">Russian</option>
+                    <option value="sm-WS">Samoan</option>
+                    <option value="sg-CF">Sango</option>
+                    <option value="gd-GB">Scots Gaelic</option>
+                    <option value="sr-RS">Serbian</option>
+                    <option value="sn-ZW">Shona</option>
+                    <option value="si-LK">Sinhala</option>
+                    <option value="sk-SK">Slovak</option>
+                    <option value="sl-SI">Slovenian</option>
+                    <option value="so-SO">Somali</option>
+                    <option value="st-ST">Sotho, Southern</option>
+                    <option value="es-ES">Spanish</option>
+                    <option value="srn-SR">Sranan Tongo</option>
+                    <option value="sw-SZ">Swahili</option>
+                    <option value="sv-SE">Swedish</option>
+                    <option value="de-CH">Swiss German</option>
+                    <option value="syc-TR">Syriac (Aramaic)</option>
+                    <option value="tl-PH">Tagalog</option>
+                    <option value="tg-TJ">Tajik</option>
+                    <option value="tmh-DZ">Tamashek (Tuareg)</option>
+                    <option value="te-IN">Telugu</option>
+                    <option value="ta-LK">Tamil</option>
+                    <option value="tet-TL">Tetum</option>
+                    <option value="th-TH">Thai</option>
+                    <option value="bo-CN">Tibetan</option>
+                    <option value="ti-TI">Tigrinya</option>
+                    <option value="tpi-PG">Tok Pisin</option>
+                    <option value="tkl-TK">Tokelauan</option>
+                    <option value="to-TO">Tongan</option>
+                    <option value="tn-BW">Tswana</option>
+                    <option value="tr-TR">Turkish</option>
+                    <option value="tk-TM">Turkmen</option>
+                    <option value="tvl-TV">Tuvaluan</option>
+                    <option value="uk-UA">Ukrainian</option>
+                    <option value="ppk-ID">Uma</option>
+                    <option value="uz-UZ">Uzbek</option>
+                    <option value="vi-VN">Vietnamese</option>
+                    <option value="wls-WF">Wallisian</option>
+                    <option value="cy-GB">Welsh</option>
+                    <option value="wo-SN">Wolof</option>
+                    <option value="xh-ZA">Xhosa</option>
+                    <option value="yi-YD">Yiddish</option>
                 </select>
-                <textarea id="target-text" placeholder="Translation" readonly></textarea>
+                <div class="textarea-container">
+                    <textarea id="target-text" placeholder="Translation" readonly></textarea>
+                    <div class="copy-button">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.123" height="19.209">
+                            <g>
+                                <rect height="19.209" opacity="0" width="16.123" x="0" y="0"/>
+                                <path d="M12.0898 2.49023L12.0898 3.87695L10.6836 3.87695L10.6836 2.50977C10.6836 1.80664 10.3027 1.40625 9.56055 1.40625L2.5293 1.40625C1.78711 1.40625 1.40625 1.80664 1.40625 2.50977L1.40625 12.8125C1.40625 13.5156 1.78711 13.916 2.5293 13.916L3.67188 13.916L3.67188 15.3223L2.45117 15.3223C0.810547 15.3223 0 14.4922 0 12.832L0 2.49023C0 0.820312 0.810547 0 2.45117 0L9.63867 0C11.2793 0 12.0898 0.820312 12.0898 2.49023Z" fill="#ffffff" fill-opacity="0.85"/>
+                                <path d="M15.7617 6.36719C15.7617 4.69727 14.9414 3.87695 13.3008 3.87695L6.12305 3.87695C4.48242 3.87695 3.67188 4.69727 3.67188 6.36719L3.67188 16.709C3.67188 18.3691 4.48242 19.1992 6.12305 19.1992L13.3008 19.1992C14.9414 19.1992 15.7617 18.3691 15.7617 16.709ZM14.3457 6.38672L14.3457 16.6895C14.3457 17.3926 13.9648 17.793 13.2324 17.793L6.20117 17.793C5.45898 17.793 5.07812 17.3926 5.07812 16.6895L5.07812 6.38672C5.07812 5.68359 5.45898 5.2832 6.20117 5.2832L13.2324 5.2832C13.9648 5.2832 14.3457 5.68359 14.3457 6.38672Z" fill="#ffffff" fill-opacity="0.85"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.language-select').select2({
+                placeholder: "Select Language",
+                width: '100%'
+            });
+        });
+    </script>
+    
 </body>
 
 </html>
